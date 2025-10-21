@@ -1,5 +1,6 @@
-import { Briefcase, Code2, Copy, Heart, Linkedin, Mail, Twitter, BookOpen, Terminal, Sparkles } from "lucide-react";
+import { Briefcase, Code2, Copy, Heart, Linkedin, Mail, Twitter, BookOpen, Terminal, Sparkles, MonitorPlay } from "lucide-react";
 import { useState } from "react";
+import { Link } from "wouter";
 import DottedBackground from "@/components/DottedBackground";
 import Navigation from "@/components/Navigation";
 import { Button } from "@/components/ui/button";
@@ -162,102 +163,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Experience Section */}
-      <section id="experience" className="min-h-screen py-20 px-4">
-        <div className="max-w-4xl mx-auto">
-          <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-12">
-            experience<span className="text-cyan-400">_</span>
-          </h2>
-
-          <div className="space-y-12">
-            {/* Experience 1 */}
-            <div className="border-l-2 border-purple-400 pl-8">
-              <div className="mb-6">
-                <h3 className="text-2xl font-bold text-foreground mb-1">Company Name</h3>
-                <p className="text-cyan-400 font-semibold mb-2">Customer Success Manager</p>
-                <p className="text-sm text-muted-foreground">01/2022 - 08/2025</p>
-              </div>
-              <div className="space-y-3 text-muted-foreground">
-                <div className="flex items-start gap-2">
-                  <span className="text-cyan-400 mt-1">//</span>
-                  <p>Led 300+ onboarding and training calls in a multi-product SaaS setup, coordinating configuration, data import, and key integrations, and delivered admin and end-user training</p>
-                </div>
-                <div className="flex items-start gap-2">
-                  <span className="text-cyan-400 mt-1">//</span>
-                  <p>Translated the voice of the customer (VoC) into product improvements, partnering closely with Product and Engineering</p>
-                </div>
-                <div className="flex items-start gap-2">
-                  <span className="text-cyan-400 mt-1">//</span>
-                  <p>Owned end-to-end implementations: scoped requirements, built project plans, aligned stakeholders, and delivered on-time go-lives</p>
-                </div>
-                <div className="flex items-start gap-2">
-                  <span className="text-cyan-400 mt-1">//</span>
-                  <p>Trained Support members before new product releases</p>
-                </div>
-              </div>
-            </div>
-
-            {/* Experience 2 */}
-            <div className="border-l-2 border-purple-400 pl-8">
-              <div className="mb-6">
-                <h3 className="text-2xl font-bold text-foreground mb-1">Company Name</h3>
-                <p className="text-cyan-400 font-semibold mb-2">Support Lead</p>
-                <p className="text-sm text-muted-foreground">07/2019 - 12/2021</p>
-              </div>
-              <div className="space-y-3 text-muted-foreground">
-                <div className="flex items-start gap-2">
-                  <span className="text-cyan-400 mt-1">//</span>
-                  <p>Reduced resolution time by ~40% through workflow tuning and self-service optimization across the help center (recognized by Help Scout 2021 awards)</p>
-                </div>
-                <div className="flex items-start gap-2">
-                  <span className="text-cyan-400 mt-1">//</span>
-                  <p>Handled high volume of inbound tickets</p>
-                </div>
-                <div className="flex items-start gap-2">
-                  <span className="text-cyan-400 mt-1">//</span>
-                  <p>Maintained a comprehensive knowledge base and internal playbooks; drove self-service adoption</p>
-                </div>
-                <div className="flex items-start gap-2">
-                  <span className="text-cyan-400 mt-1">//</span>
-                  <p>Acted as escalation manager between users and Engineering to resolve high-impact issues and run post-incident reviews</p>
-                </div>
-                <div className="flex items-start gap-2">
-                  <span className="text-cyan-400 mt-1">//</span>
-                  <p>Onboarded high-value customers (Amazon, Sony, Fujifilm, Ogilvy and others), delivering best-practice configuration and training</p>
-                </div>
-              </div>
-            </div>
-
-            {/* Experience 3 */}
-            <div className="border-l-2 border-purple-400 pl-8">
-              <div className="mb-6">
-                <h3 className="text-2xl font-bold text-foreground mb-1">Agency Name</h3>
-                <p className="text-cyan-400 font-semibold mb-2">Project Manager</p>
-                <p className="text-sm text-muted-foreground">02/2015 - 06/2019</p>
-              </div>
-              <div className="space-y-3 text-muted-foreground">
-                <div className="flex items-start gap-2">
-                  <span className="text-cyan-400 mt-1">//</span>
-                  <p>Led end-to-end delivery of digital projects for global brands (VICE, T-Mobile, Heineken, IKEA and others), from discovery and scoping through launch</p>
-                </div>
-                <div className="flex items-start gap-2">
-                  <span className="text-cyan-400 mt-1">//</span>
-                  <p>Built project plans/timelines, managed risks/issues/decisions, and kept cross-functional teams aligned to budget and schedule</p>
-                </div>
-                <div className="flex items-start gap-2">
-                  <span className="text-cyan-400 mt-1">//</span>
-                  <p>Collaborated with stakeholders to define requirements and maintain strategic relationships</p>
-                </div>
-                <div className="flex items-start gap-2">
-                  <span className="text-cyan-400 mt-1">//</span>
-                  <p>Produced UX/UI deliverables (wireframes, prototypes) for platforms including big data platforms and CRM systems</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* Lists Section */}
       <section id="lists" className="min-h-screen py-20 px-4">
         <div className="max-w-4xl mx-auto">
@@ -265,57 +170,70 @@ export default function Home() {
             lists<span className="text-cyan-400">_</span>
           </h2>
 
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-2 gap-8">
             {/* Reading */}
-            <div className="border-l-2 border-green-400 pl-6">
-              <div className="flex items-center gap-3 mb-4">
-                <BookOpen className="w-6 h-6 text-green-400" />
-                <h3 className="text-2xl font-bold text-foreground">Reading</h3>
+            <Link href="/reading">
+              <div className="border-l-2 border-green-400 pl-6 cursor-pointer group hover:border-green-300 transition-colors">
+                <div className="flex items-center gap-3 mb-4">
+                  <BookOpen className="w-6 h-6 text-green-400 group-hover:text-green-300 transition-colors" />
+                  <h3 className="text-2xl font-bold text-foreground">Reading</h3>
+                </div>
+                <p className="text-muted-foreground mb-4">
+                  Books, articles, and resources I'm currently reading or have found valuable.
+                </p>
+                <span className="text-green-400 group-hover:text-green-300 transition-colors border-b-2 border-transparent group-hover:border-green-400 font-semibold">
+                  View list →
+                </span>
               </div>
-              <p className="text-muted-foreground mb-4">
-                Books, articles, and resources I'm currently reading or have found valuable.
-              </p>
-              <a
-                href="#reading"
-                className="text-green-400 hover:text-green-300 transition-colors border-b-2 border-transparent hover:border-green-400 font-semibold"
-              >
-                View list →
-              </a>
-            </div>
+            </Link>
 
             {/* Software */}
-            <div className="border-l-2 border-blue-400 pl-6">
-              <div className="flex items-center gap-3 mb-4">
-                <Terminal className="w-6 h-6 text-blue-400" />
-                <h3 className="text-2xl font-bold text-foreground">Software</h3>
+            <Link href="/software">
+              <div className="border-l-2 border-blue-400 pl-6 cursor-pointer group hover:border-blue-300 transition-colors">
+                <div className="flex items-center gap-3 mb-4">
+                  <Terminal className="w-6 h-6 text-blue-400 group-hover:text-blue-300 transition-colors" />
+                  <h3 className="text-2xl font-bold text-foreground">Software</h3>
+                </div>
+                <p className="text-muted-foreground mb-4">
+                  Tools, apps, and software I use daily to stay productive and creative.
+                </p>
+                <span className="text-blue-400 group-hover:text-blue-300 transition-colors border-b-2 border-transparent group-hover:border-blue-400 font-semibold">
+                  View list →
+                </span>
               </div>
-              <p className="text-muted-foreground mb-4">
-                Tools, apps, and software I use daily to stay productive and creative.
-              </p>
-              <a
-                href="#software"
-                className="text-blue-400 hover:text-blue-300 transition-colors border-b-2 border-transparent hover:border-blue-400 font-semibold"
-              >
-                View list →
-              </a>
-            </div>
+            </Link>
 
             {/* Prompts */}
-            <div className="border-l-2 border-purple-400 pl-6">
-              <div className="flex items-center gap-3 mb-4">
-                <Sparkles className="w-6 h-6 text-purple-400" />
-                <h3 className="text-2xl font-bold text-foreground">Prompts</h3>
+            <Link href="/prompts">
+              <div className="border-l-2 border-orange-400 pl-6 cursor-pointer group hover:border-orange-300 transition-colors">
+                <div className="flex items-center gap-3 mb-4">
+                  <Sparkles className="w-6 h-6 text-orange-400 group-hover:text-orange-300 transition-colors" />
+                  <h3 className="text-2xl font-bold text-foreground">Prompts</h3>
+                </div>
+                <p className="text-muted-foreground mb-4">
+                  AI prompts and templates I've crafted for various use cases.
+                </p>
+                <span className="text-orange-400 group-hover:text-orange-300 transition-colors border-b-2 border-transparent group-hover:border-orange-400 font-semibold">
+                  View list →
+                </span>
               </div>
-              <p className="text-muted-foreground mb-4">
-                AI prompts and templates I've crafted for various use cases.
-              </p>
-              <a
-                href="#prompts"
-                className="text-purple-400 hover:text-purple-300 transition-colors border-b-2 border-transparent hover:border-purple-400 font-semibold"
-              >
-                View list →
-              </a>
-            </div>
+            </Link>
+
+            {/* Demos */}
+            <Link href="/demos">
+              <div className="border-l-2 border-pink-400 pl-6 cursor-pointer group hover:border-pink-300 transition-colors">
+                <div className="flex items-center gap-3 mb-4">
+                  <MonitorPlay className="w-6 h-6 text-pink-400 group-hover:text-pink-300 transition-colors" />
+                  <h3 className="text-2xl font-bold text-foreground">Demo's</h3>
+                </div>
+                <p className="text-muted-foreground mb-4">
+                  Interactive demos and project showcases highlighting various implementations.
+                </p>
+                <span className="text-pink-400 group-hover:text-pink-300 transition-colors border-b-2 border-transparent group-hover:border-pink-400 font-semibold">
+                  View list →
+                </span>
+              </div>
+            </Link>
           </div>
         </div>
       </section>

@@ -50,12 +50,6 @@ export default function Navigation() {
               about me
             </button>
             <button
-              onClick={() => scrollToSection("experience")}
-              className="px-4 py-2 text-sm font-medium text-foreground hover:text-purple-400 transition-colors border-2 border-transparent hover:border-purple-400 rounded-lg"
-            >
-              experience
-            </button>
-            <button
               onClick={() => scrollToSection("lists")}
               className="px-4 py-2 text-sm font-medium text-foreground hover:text-green-400 transition-colors border-2 border-transparent hover:border-green-400 rounded-lg"
             >
@@ -120,12 +114,6 @@ export default function Navigation() {
               className="w-full text-left px-4 py-3 text-sm font-medium text-foreground hover:text-orange-400 transition-colors border-2 border-transparent hover:border-orange-400 rounded-lg"
             >
               about me
-            </button>
-            <button
-              onClick={() => scrollToSection("experience")}
-              className="w-full text-left px-4 py-3 text-sm font-medium text-foreground hover:text-purple-400 transition-colors border-2 border-transparent hover:border-purple-400 rounded-lg"
-            >
-              experience
             </button>
             <button
               onClick={() => scrollToSection("lists")}
