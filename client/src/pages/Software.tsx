@@ -19,7 +19,7 @@ export default function Software() {
         setItems(data);
       } catch (error) {
         console.error("Error loading software items:", error);
-        toast.error("Failed to load software list");
+        toast.error("Unable to load software list. Refreshing the page might help.");
       } finally {
         setLoading(false);
       }
@@ -50,7 +50,7 @@ export default function Software() {
         <Link href="/">
           <Button variant="ghost" className="mb-8 hover:text-blue-400">
             <ArrowLeft className="w-4 h-4 mr-2" />
-            Back to Home
+            Home
           </Button>
         </Link>
 
@@ -62,7 +62,7 @@ export default function Software() {
             </h1>
           </div>
           <p className="text-xl text-muted-foreground">
-            Tools, apps, and software I use daily to stay productive and creative.
+            The tools I actually use every day—no bloat, just productivity essentials.
           </p>
         </div>
 
@@ -79,8 +79,8 @@ export default function Software() {
         ) : items.length === 0 ? (
           <div className="text-center py-20">
             <Terminal className="w-16 h-16 text-muted-foreground mx-auto mb-4" />
-            <h3 className="text-2xl font-semibold text-foreground mb-2">No items yet</h3>
-            <p className="text-muted-foreground">Check back soon for software recommendations!</p>
+            <h3 className="text-2xl font-semibold text-foreground mb-2">No tools listed yet</h3>
+            <p className="text-muted-foreground">Jason's favorite productivity tools will appear here once added.</p>
           </div>
         ) : (
           <div className="grid md:grid-cols-2 gap-6">
@@ -97,7 +97,7 @@ export default function Software() {
                       target="_blank"
                       rel="noopener noreferrer"
                       className="text-blue-400 hover:text-blue-300 transition-colors"
-                      title="View external link"
+                      title="Visit website"
                     >
                       <ExternalLink className="w-5 h-5" />
                     </a>

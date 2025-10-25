@@ -35,7 +35,7 @@ export default function Demos() {
         <Link href="/">
           <Button variant="ghost" className="mb-8 hover:text-pink-400">
             <ArrowLeft className="w-4 h-4 mr-2" />
-            Back to Home
+            Home
           </Button>
         </Link>
 
@@ -43,11 +43,11 @@ export default function Demos() {
           <div className="flex items-center gap-4 mb-4">
             <MonitorPlay className="w-12 h-12 text-pink-400" />
             <h1 className="text-4xl md:text-6xl font-bold text-foreground">
-              Demo's<span className="text-pink-400">_</span>
+              Demos<span className="text-pink-400">_</span>
             </h1>
           </div>
           <p className="text-xl text-muted-foreground">
-            Interactive demos and project showcases highlighting various implementations.
+            Projects I've built to explore new ideas and solve real problems.
           </p>
         </div>
 
@@ -64,8 +64,8 @@ export default function Demos() {
         ) : items.length === 0 ? (
           <div className="text-center py-20">
             <MonitorPlay className="w-16 h-16 text-muted-foreground mx-auto mb-4" />
-            <h3 className="text-2xl font-semibold text-foreground mb-2">No demos yet</h3>
-            <p className="text-muted-foreground">Check back soon for project demos and showcases!</p>
+            <h3 className="text-2xl font-semibold text-foreground mb-2">No demos to show yet</h3>
+            <p className="text-muted-foreground">Project showcases will appear here once Jason adds them.</p>
           </div>
         ) : (
           <div className="grid md:grid-cols-2 gap-6">
@@ -96,7 +96,7 @@ export default function Demos() {
                         target="_blank"
                         rel="noopener noreferrer"
                         className="text-pink-400 hover:text-pink-300 transition-colors"
-                        title="View demo"
+                        title="Open demo"
                       >
                         <ExternalLink className="w-5 h-5" />
                       </a>

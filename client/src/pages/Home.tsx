@@ -12,7 +12,7 @@ export default function Home() {
   const copyEmail = () => {
     navigator.clipboard.writeText("jason@jslabs.xyz");
     setCopiedEmail(true);
-    toast.success("Email copied to clipboard!");
+    toast.success("Email copied! jason@jslabs.xyz is ready to paste.");
     setTimeout(() => setCopiedEmail(false), 2000);
   };
 
@@ -179,10 +179,10 @@ export default function Home() {
                   <h3 className="text-2xl font-bold text-foreground">Reading</h3>
                 </div>
                 <p className="text-muted-foreground mb-4">
-                  Books, articles, and resources I'm currently reading or have found valuable.
+                  Books and articles that shaped how I think about customer success, product, and growth.
                 </p>
                 <span className="text-green-400 group-hover:text-green-300 transition-colors border-b-2 border-transparent group-hover:border-green-400 font-semibold">
-                  View list →
+                  Explore Reading →
                 </span>
               </div>
             </Link>
@@ -195,10 +195,10 @@ export default function Home() {
                   <h3 className="text-2xl font-bold text-foreground">Software</h3>
                 </div>
                 <p className="text-muted-foreground mb-4">
-                  Tools, apps, and software I use daily to stay productive and creative.
+                  The tools I actually use every day—no bloat, just productivity essentials.
                 </p>
                 <span className="text-blue-400 group-hover:text-blue-300 transition-colors border-b-2 border-transparent group-hover:border-blue-400 font-semibold">
-                  View list →
+                  Browse Tools →
                 </span>
               </div>
             </Link>
@@ -211,10 +211,10 @@ export default function Home() {
                   <h3 className="text-2xl font-bold text-foreground">Prompts</h3>
                 </div>
                 <p className="text-muted-foreground mb-4">
-                  AI prompts and templates I've crafted for various use cases.
+                  Copy-paste AI prompts I use to speed up customer support, analysis, and content creation.
                 </p>
                 <span className="text-orange-400 group-hover:text-orange-300 transition-colors border-b-2 border-transparent group-hover:border-orange-400 font-semibold">
-                  View list →
+                  View Prompts →
                 </span>
               </div>
             </Link>
@@ -224,13 +224,13 @@ export default function Home() {
               <div className="border-l-2 border-pink-400 pl-6 cursor-pointer group hover:border-pink-300 transition-colors">
                 <div className="flex items-center gap-3 mb-4">
                   <MonitorPlay className="w-6 h-6 text-pink-400 group-hover:text-pink-300 transition-colors" />
-                  <h3 className="text-2xl font-bold text-foreground">Demo's</h3>
+                  <h3 className="text-2xl font-bold text-foreground">Demos</h3>
                 </div>
                 <p className="text-muted-foreground mb-4">
-                  Interactive demos and project showcases highlighting various implementations.
+                  Projects I've built to explore new ideas and solve real problems.
                 </p>
                 <span className="text-pink-400 group-hover:text-pink-300 transition-colors border-b-2 border-transparent group-hover:border-pink-400 font-semibold">
-                  View list →
+                  See Demos →
                 </span>
               </div>
             </Link>
@@ -295,7 +295,7 @@ export default function Home() {
                     size="icon"
                     onClick={copyEmail}
                     className="h-8 w-8 hover:text-orange-400"
-                    title="Copy email address"
+                    title="Copy email"
                   >
                     <Copy className="h-4 w-4" />
                   </Button>

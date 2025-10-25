@@ -20,7 +20,7 @@ export default function Prompts() {
         setItems(data);
       } catch (error) {
         console.error("Error loading prompts items:", error);
-        toast.error("Failed to load prompts list");
+        toast.error("Couldn't load prompts. Please refresh or try again in a moment.");
       } finally {
         setLoading(false);
       }
@@ -30,7 +30,7 @@ export default function Prompts() {
 
   const copyPrompt = (text: string, title: string) => {
     navigator.clipboard.writeText(text);
-    toast.success(`"${title}" copied to clipboard!`);
+    toast.success(`Prompt copied! Ready to use in your AI tool.`);
   };
 
   const toggleExpanded = (id: string) => {
@@ -45,7 +45,7 @@ export default function Prompts() {
         <Link href="/">
           <Button variant="ghost" className="mb-8 hover:text-orange-400">
             <ArrowLeft className="w-4 h-4 mr-2" />
-            Back to Home
+            Home
           </Button>
         </Link>
 
@@ -57,7 +57,7 @@ export default function Prompts() {
             </h1>
           </div>
           <p className="text-xl text-muted-foreground">
-            AI prompts and templates I've crafted for various use cases.
+            Copy-paste AI prompts I use to speed up customer support, analysis, and content creation.
           </p>
         </div>
 
@@ -74,8 +74,8 @@ export default function Prompts() {
         ) : items.length === 0 ? (
           <div className="text-center py-20">
             <Sparkles className="w-16 h-16 text-muted-foreground mx-auto mb-4" />
-            <h3 className="text-2xl font-semibold text-foreground mb-2">No prompts yet</h3>
-            <p className="text-muted-foreground">Check back soon for AI prompts and templates!</p>
+            <h3 className="text-2xl font-semibold text-foreground mb-2">No prompts available yet</h3>
+            <p className="text-muted-foreground">Jason is crafting useful AI prompts to share. Stay tuned!</p>
           </div>
         ) : (
           <div className="space-y-6">
@@ -93,7 +93,7 @@ export default function Prompts() {
                       size="icon"
                       onClick={() => copyPrompt(item.prompt_text, item.title)}
                       className="hover:text-orange-400"
-                      title="Copy prompt to clipboard"
+                      title="Copy prompt"
                     >
                       <Copy className="w-5 h-5" />
                     </Button>
@@ -116,11 +116,11 @@ export default function Prompts() {
                     >
                       {isExpanded ? (
                         <>
-                          Hide Prompt <ChevronUp className="w-4 h-4 ml-2" />
+                          Hide prompt <ChevronUp className="w-4 h-4 ml-2" />
                         </>
                       ) : (
                         <>
-                          View Prompt <ChevronDown className="w-4 h-4 ml-2" />
+                          Show full prompt <ChevronDown className="w-4 h-4 ml-2" />
                         </>
                       )}
                     </Button>

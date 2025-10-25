@@ -19,7 +19,7 @@ export default function Reading() {
         setItems(data);
       } catch (error) {
         console.error("Error loading reading items:", error);
-        toast.error("Failed to load reading list");
+        toast.error("Couldn't load reading items. Please check your connection and try again.");
       } finally {
         setLoading(false);
       }
@@ -61,7 +61,7 @@ export default function Reading() {
         <Link href="/">
           <Button variant="ghost" className="mb-8 hover:text-green-400">
             <ArrowLeft className="w-4 h-4 mr-2" />
-            Back to Home
+            Home
           </Button>
         </Link>
 
@@ -73,7 +73,7 @@ export default function Reading() {
             </h1>
           </div>
           <p className="text-xl text-muted-foreground">
-            Books, articles, and resources I'm currently reading or have found valuable.
+            Books and articles that shaped how I think about customer success, product, and growth.
           </p>
         </div>
 
@@ -91,8 +91,8 @@ export default function Reading() {
         ) : items.length === 0 ? (
           <div className="text-center py-20">
             <BookOpen className="w-16 h-16 text-muted-foreground mx-auto mb-4" />
-            <h3 className="text-2xl font-semibold text-foreground mb-2">No items yet</h3>
-            <p className="text-muted-foreground">Check back soon for reading recommendations!</p>
+            <h3 className="text-2xl font-semibold text-foreground mb-2">Your reading list is empty</h3>
+            <p className="text-muted-foreground">When Jason adds books and articles, they'll appear here. Check back soon!</p>
           </div>
         ) : (
           <div className="grid md:grid-cols-2 gap-6">
@@ -109,7 +109,7 @@ export default function Reading() {
                       target="_blank"
                       rel="noopener noreferrer"
                       className="text-green-400 hover:text-green-300 transition-colors"
-                      title="View external link"
+                      title="Open link"
                     >
                       <ExternalLink className="w-5 h-5" />
                     </a>
